@@ -19,7 +19,7 @@ data "aws_ami" "devops" {
 
 
 data "aws_ssm_parameter" "public_subnet_id" {
-  name="/${var.project}/${var.environment}/security_grp_id"
+  name="/${var.project}/${var.environment}/public_subnet_id"
 }
 
 data "aws_ssm_parameter" "bastian_sg_id" {
