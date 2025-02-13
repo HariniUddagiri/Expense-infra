@@ -20,4 +20,11 @@ resource "aws_ssm_parameter" "bastian_security_grp_id" {
   name  = "/${var.project}/${var.environment}/bastian_security_grp_id"
   type  = "String"
   value = module.bastian_sg.aws_security_group
+  
+}
+
+resource "aws_ssm_parameter" "app_alb_sg_id" {
+  name="/${var.project}/${var.environment}/app_alb_sg_grp_id"
+  type = "String"
+  value = module.aws_alb_sg.aws_security_group
 }
